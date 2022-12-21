@@ -1,4 +1,9 @@
 package designpatterns.abstractFactory;
 
-public class OSAbstractFactory {
+import designpatterns.abstractFactory.gui.GUIObject;
+
+public interface OSAbstractFactory {
+    public GUIObject getButton();
+    public GUIObject getCombo();
+    public GUIObject getList();
 }
