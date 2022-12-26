@@ -7,7 +7,7 @@ public class Trader {
         this.name = n;
         this.city = c;
     }
-    public String getName(){
+    public  String getName(){
         return this.name;
     }
     public String getCity(){
@@ -16,5 +16,6 @@ public class Trader {
     public String toString(){
         return "Trader:"+this.name + " in " + this.city;
     }
+
 }
 
