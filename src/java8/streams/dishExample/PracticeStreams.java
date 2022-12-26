@@ -1,6 +1,5 @@
-package java8.streams;
+package java8.streams.dishExample;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -219,7 +218,7 @@ public class PracticeStreams {
                 .findAny()
                 .ifPresent(dish-> System.out.println(dish.getName()));
     }
-    private void disbplayCountOfMemmbersInAStream(){
+    private void displayCountOfMemmbersInAStream(){
         //This is not an efficient way
         System.out.println("Count Of Members in a stream -- > "+prepareDishBeanList().stream().collect(Collectors.toList()).size());
 
@@ -258,6 +257,11 @@ public class PracticeStreams {
 
 
 
+    }
+    private void printSumOfCaloriesUsingMapToIntStream(){
+        System.out.println(
+        prepareDishBeanList().stream().mapToInt(Dish::getCalories).sum()
+        );
     }
 
     public static void main (String args[]){
@@ -336,13 +340,17 @@ public class PracticeStreams {
         System.out.println("useOfReduceinStreams \n");
 
         System.out.println("disbplayCountOfMemmbersInAStream");
-        practiceStreams.disbplayCountOfMemmbersInAStream();
+        practiceStreams.displayCountOfMemmbersInAStream();
         System.out.println("disbplayCountOfMemmbersInAStream \n");
 
 
         System.out.println("displayTotalNumberOfCaloriesinMenue");
         practiceStreams.displayTotalNumberOfCaloriesinMenue();
         System.out.println("displayTotalNumberOfCaloriesinMenue \n");
+
+        System.out.println("printSumOfCaloriesUsingMapToIntStream");
+        practiceStreams.printSumOfCaloriesUsingMapToIntStream();
+        System.out.println("printSumOfCaloriesUsingMapToIntStream \n");
 
 
 

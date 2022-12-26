@@ -1,4 +1,4 @@
-package java8.streams;
+package java8.streams.dishExample;
 
 public class Dish {
     private String name;
